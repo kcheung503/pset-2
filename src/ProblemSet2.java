@@ -48,7 +48,7 @@ public class ProblemSet2 {
          System.out.println("GRADE    : " + grade);
          System.out.println("AGE      : " + age);
          System.out.println("HOMETOWN : " + hometown);
-         in.close();
+
 
         /*
          * Exercise 2.
@@ -57,6 +57,37 @@ public class ProblemSet2 {
          * bills, quarters, dimes, nickels, and pennies needed to produce this amount.
          */
 
+         final int DOLLAR_VALUE = 100;
+         final int QUARTER_VALUE = 25;
+         final int DIME_VALUE = 10;
+         final int NICKEL_VALUE = 5;
+         final int PENNY_VALUE = 1;
+
+         System.out.print("\nEnter a dollar amount: ");
+         double dollarAmount = in.nextDouble();
+
+         int pennies1 = (int) (dollarAmount * 100);
+
+         int dollars1 = pennies1 / DOLLAR_VALUE;
+         pennies1 = pennies1 % DOLLAR_VALUE;
+
+         int quarters1 = pennies1 / QUARTER_VALUE;
+         pennies1 = pennies1 % QUARTER_VALUE;
+
+         int dimes1 = pennies1 / DIME_VALUE;
+         pennies1 = pennies1 % DIME_VALUE;
+
+         int nickels1 = pennies1 / NICKEL_VALUE;
+         pennies1 = pennies1 % NICKEL_VALUE;
+
+         int pennies2 = pennies1 / PENNY_VALUE;
+         pennies1 = pennies1 % PENNY_VALUE;
+
+         System.out.println("\nDOLLARS  : " + dollars1);
+         System.out.println("QUARTERS : " + quarters1);
+         System.out.println("DIMES    : " + dimes1);
+         System.out.println("NICKELS  : " + nickels1);
+         System.out.println("PENNIES  : " + pennies2);
 
 
         /*
@@ -66,7 +97,40 @@ public class ProblemSet2 {
          * bills and coins needed to produce this amount.
          */
 
+         final int TEN_DOLLAR_VALUE = 1000;
+         final int FIVE_DOLLAR_VALUE = 500;
 
+         System.out.print("\nEnter a dollar amount: ");
+         double dollarAmount2 = in.nextDouble();
+
+         int pennies3 = (int) (dollarAmount2 * 100);
+
+         int tenDollar2 = pennies3 / TEN_DOLLAR_VALUE;
+         pennies3 = pennies3 % TEN_DOLLAR_VALUE;
+
+         int fiveDollar2 = pennies3 / FIVE_DOLLAR_VALUE;
+         pennies3 = pennies3 % FIVE_DOLLAR_VALUE;
+
+         int dollars2 = pennies3 / DOLLAR_VALUE;
+         pennies3 = pennies3 % DOLLAR_VALUE;
+
+         int quarters2 = pennies3 / QUARTER_VALUE;
+         pennies3 = pennies3 % QUARTER_VALUE;
+
+         int dimes2 = pennies3 / DIME_VALUE;
+         pennies3 = pennies3 % DIME_VALUE;
+
+         int nickels2 = pennies3 / NICKEL_VALUE;
+         pennies3 = pennies3 % NICKEL_VALUE;
+
+         int pennies4 = (int) (pennies3 / PENNY_VALUE);
+         pennies3 = pennies3 % PENNY_VALUE;
+
+         int billCount = tenDollar2 + fiveDollar2 + dollars2;
+         int coinCount = quarters2 + dimes2 + nickels2 + pennies4;
+
+         System.out.println("\nBILLS : " + billCount);
+         System.out.println("COINS : " + coinCount);
 
         /*
          * Exercise 4.
