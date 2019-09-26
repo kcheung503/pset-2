@@ -89,7 +89,6 @@ public class ProblemSet2 {
          System.out.println("NICKELS  : " + nickels1);
          System.out.println("PENNIES  : " + pennies2);
 
-
         /*
          * Exercise 3.
          *
@@ -139,7 +138,26 @@ public class ProblemSet2 {
          * and inches.
          */
 
+         final int INCHES_IN_A_MILE = 63360;
+         final int INCHES_IN_A_YARD = 36;
+         final int INCHES_IN_A_FOOT = 12;
 
+         System.out.print("\nEnter a number of inches: ");
+         int inchesCount = in.nextInt();
+
+         int milesCount = inchesCount / INCHES_IN_A_MILE;
+         inchesCount = inchesCount % INCHES_IN_A_MILE;
+
+         int yardsCount = inchesCount / INCHES_IN_A_YARD;
+         inchesCount = inchesCount % INCHES_IN_A_YARD;
+
+         int feetCount = inchesCount / INCHES_IN_A_FOOT;
+         inchesCount = inchesCount % INCHES_IN_A_FOOT;
+
+         System.out.println("\nMILES  : " + milesCount);
+         System.out.println("YARDS  : " + yardsCount);
+         System.out.println("FEET   : " + feetCount);
+         System.out.println("INCHES : " + inchesCount);
 
         /*
          * Exercise 5.
@@ -148,7 +166,21 @@ public class ProblemSet2 {
          * meters, and centimeters.
          */
 
+         final int CM_IN_A_METER = 100;
+         final int CM_IN_A_KILOMETER = 100000;
 
+         System.out.print("\nEnter a number of centimeters: ");
+         int cmCount = in.nextInt();
+
+         int kmCount = cmCount / CM_IN_A_KILOMETER;
+         cmCount = cmCount % CM_IN_A_KILOMETER;
+
+         int meterCount = cmCount / CM_IN_A_METER;
+         cmCount = cmCount % CM_IN_A_METER;
+
+         System.out.println("\nKILOMETERS  : " + kmCount);
+         System.out.println("METERS      : " + meterCount);
+         System.out.println("CENTIMETERS : " + cmCount);
 
         /*
          * Exercise 6.
