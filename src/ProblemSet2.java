@@ -240,7 +240,14 @@ public class ProblemSet2 {
          * Given a string, reverse and print the first and second halves of that string.
          */
 
+         System.out.print("\nEnter a string: ");
+         in.nextLine();
+         String initialString = in.nextLine();
 
+         String stringHalfOne = initialString.substring(0, (initialString.length() / 2));
+         String stringHalfTwo = initialString.substring(initialString.length() / 2);
+
+         System.out.println("\n" + stringHalfTwo + stringHalfOne);
 
         /*
          * Exercise 10.
