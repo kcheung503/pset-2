@@ -49,7 +49,6 @@ public class ProblemSet2 {
          System.out.println("AGE      : " + age);
          System.out.println("HOMETOWN : " + hometown);
 
-
         /*
          * Exercise 2.
          *
@@ -255,7 +254,18 @@ public class ProblemSet2 {
          * Given a first, middle, and last name, print the corresponding initials.
          */
 
+         System.out.print("\nEnter your first name: ");
+         String firstName2 = in.nextLine();
+         System.out.print("Enter your middle name: ");
+         String middleName2 = in.nextLine();
+         System.out.print("Enter your last name: ");
+         String lastName2 = in.nextLine();
 
+         String firstInitial = firstName2.substring(0, 1);
+         String middleInitial = middleName2.substring(0, 1);
+         String lastInitial = lastName2.substring(0, 1);
+
+         System.out.println("\n" + firstInitial + middleInitial + lastInitial);
 
         in.close();
     }
