@@ -188,7 +188,15 @@ public class ProblemSet2 {
          * Given a diameter, print the area and circumference of the corresponding circle.
          */
 
+         System.out.print("\nEnter a diameter: ");
+         double diameter = in.nextDouble();
 
+         double radius = diameter / 2;
+         double circleArea = Math.PI * Math.pow(radius, 2);
+         double circumfrence = Math.PI * diameter;
+
+         System.out.printf("\nAREA          : %,.2f", circleArea);
+         System.out.printf("\nCIRCUMFERENCE : %,.2f\n", circumfrence);
 
         /*
          * Exercise 7.
@@ -197,7 +205,19 @@ public class ProblemSet2 {
          * corresponding rectangle.
          */
 
+         System.out.print("\nEnter a length: ");
+         double rectangleLength = in.nextDouble();
+         System.out.print("Enter a width: ");
+         double rectangleWidth = in.nextDouble();
 
+         double rectangleArea = rectangleLength * rectangleWidth;
+         double rectanglePerimeter = (2 * rectangleLength) + (2 * rectangleWidth);
+         double rectangleDiagonal = Math.pow(rectangleLength, 2) + Math.pow(rectangleWidth, 2);
+         rectangleDiagonal = Math.sqrt(rectangleDiagonal);
+
+         System.out.printf("\nAREA      : %,.2f", rectangleArea);
+         System.out.printf("\nPERIMETER : %,.2f", rectanglePerimeter);
+         System.out.printf("\nDIAGONAL  : %,.2f\n", rectangleDiagonal);
 
         /*
          * Exercise 8.
@@ -205,7 +225,14 @@ public class ProblemSet2 {
          * Given a side length, print the area and perimeter of the corresponding hexagon.
          */
 
+         System.out.print("\nEnter a side length: ");
+         double hexagonSideLength = in.nextDouble();
 
+         double hexagonArea = Math.pow(hexagonSideLength, 2) * ((3 * Math.sqrt(3)) / 2);
+         double hexagonPerimeter = hexagonSideLength * 6;
+
+         System.out.printf("\nAREA      : %,.2f", hexagonArea);
+         System.out.printf("\nPERIMETER : %,.2f\n", hexagonPerimeter);
 
         /*
          * Exercise 9.
